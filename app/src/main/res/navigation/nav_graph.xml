@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.evolitist.graphplotter.ui.home.HomeFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/home_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+        <action
+            android:id="@+id/action_homeFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.evolitist.graphplotter.ui.SettingsFragment"
+        android:label="@string/settings" />
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.evolitist.graphplotter.ui.result.ResultFragment"
+        android:label="@string/results"
+        tools:layout="@layout/result_fragment" >
+        <argument
+            android:name="points"
+            app:argType="com.evolitist.graphplotter.model.Point[]" />
+        <action
+            android:id="@+id/action_resultFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/enter"
+            app:exitAnim="@anim/exit"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/pop_enter"
+            app:popExitAnim="@anim/pop_exit" />
+        <argument
+            android:name="count"
+            app:argType="integer" />
+    </fragment>
+</navigation>

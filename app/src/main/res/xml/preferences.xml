@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--<ListPreference
+        android:key="@string/key_theme"
+        android:title="@string/pref_theme"
+        android:entries="@array/pref_themes_labels"
+        android:entryValues="@array/pref_themes"
+        android:defaultValue="@string/key_theme_system"
+        app:useSimpleSummaryProvider="true" />-->
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="@string/key_graph_smooth"
+        android:title="@string/pref_graph_smooth" />
+    <!--<SeekBarPreference
+        android:key="@string/key_graph_max_zoom"
+        android:title="@string/pref_graph_max_zoom"
+        android:defaultValue="5"
+        android:max="10"
+        seekBarPreferenceStyle=""
+        app:min="2"
+        app:seekBarIncrement="1" />-->
+</PreferenceScreen>
